@@ -162,7 +162,7 @@ class LockBase:
         >>> lock = LockBase('somefile', threaded=False)
         """
         self.path = path
-        self.lock_file = os.path.abspath(path) + ".lock"
+        self.lock_file = os.path.abspath(path)
         self.hostname = socket.gethostname()
         self.pid = os.getpid()
         if threaded:
